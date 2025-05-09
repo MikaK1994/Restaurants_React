@@ -7,7 +7,7 @@ function RestaurantCard({ restaurant, onRemoveRating }) {
   return (
     <div className="restaurant-card">
       <div className="card-left">
-        <img src={restaurant.imageUrl} alt={restaurant.name} className="restaurant-image" />
+        <img src="images/cheese_burger.jpg" alt={restaurant.name} className="restaurant-image" />
       </div>
       <div className="card-right">
         <div className="card-right-content"> {/* New container for text content */}
@@ -15,11 +15,11 @@ function RestaurantCard({ restaurant, onRemoveRating }) {
             <strong><Link to={`/${restaurant.id}`}>{restaurant.name}</Link></strong>
           </h3>
           <div className="restaurant-rating">
-            <StarRating rating={restaurant.averageRating} />
-            <span>{restaurant.averageRating} ({restaurant.reviewCount} reviews)</span>
+            <StarRating rating={restaurant.rating} />
+            <span>{restaurant.rating} ({restaurant.review_count} reviews)</span>
           </div>
           <p className="restaurant-details">
-            <span>{restaurant.cuisine}</span><span>{restaurant.priceRange}</span>
+            <span>Kuvaus: {restaurant.cuisine}</span>Hintataso: <span>{restaurant.price_range}</span>
           </p>
           <p className="restaurant-address">{restaurant.address}</p>
         </div>
