@@ -19,10 +19,10 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Ratings</Link>
+              <Link to="/">Restaurants</Link>
             </li>
             <li>
-              <Link to="/restaurants">Restaurants</Link>
+              <Link to="restaurants/ratings">Ratings</Link>
             </li>
             
           </ul>
@@ -31,7 +31,7 @@ function App() {
        
         <Routes>
           
-          <Route path="/:id" element={<RatingsByRestaurant />} />
+          <Route path="/restaurants/:id/ratings" element={<RatingsByRestaurant />} />
           <Route path="/" element={<RestaurantList />} />
           
         </Routes>
